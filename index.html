@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validacims – Genera els teus formularis oficials de la FEEC</title>
+    <style>
+        /* Resetejar marges i definir fonts base */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #fdf6e3; /* fons suau i càlid */
+            color: #333;
+            line-height: 1.5;
+        }
+
+        header {
+            background: linear-gradient(135deg, #34a853, #2563eb); /* degradat entre verd i blau */
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            max-width: 600px;
+            margin: 0 auto;
+            font-size: 1rem;
+        }
+
+        nav {
+            margin-top: 20px;
+        }
+
+        nav a {
+            display: inline-block;
+            margin: 8px;
+            padding: 12px 24px;
+            border-radius: 8px;
+            background-color: white;
+            color: #2563eb;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #eef3ff;
+        }
+
+        main {
+            padding: 40px 20px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        section {
+            margin-bottom: 40px;
+        }
+
+        section h2 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            color: #2563eb;
+        }
+
+        .steps {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .step {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+            padding: 20px;
+            display: flex;
+            gap: 15px;
+        }
+
+        .step-number {
+            flex-shrink: 0;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #2563eb;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .feature {
+            flex: 1 1 250px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+            padding: 20px;
+        }
+
+        .feature h3 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: #34a853;
+        }
+
+        .feature p {
+            font-size: 0.95rem;
+        }
+
+        footer {
+            background-color: #fff;
+            padding: 20px;
+            text-align: center;
+            border-top: 1px solid #eee;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 1.6rem;
+            }
+            nav a {
+                display: block;
+                margin: 10px 0;
+            }
+            .step {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Validacims</h1>
+        <p>
+            Genera fàcilment els formularis oficials de la FEEC per validar els teus cims del repte 100 Cims.
+            Compatible amb Windows i macOS. Pagament únic amb clau de llicència.
+        </p>
+        <nav>
+            <a href="https://payhip.com/b/UauE6" target="_blank" rel="noopener">Descarrega per a Windows</a>
+            <a href="https://payhip.com/b/IuoPc" target="_blank" rel="noopener">Descarrega per a macOS</a>
+            <a href="https://payhip.com/b/NOG59" target="_blank" rel="noopener" style="background-color:#34a853;color:white;">Compra una llicència</a>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Com funciona</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div>
+                        <strong>Copia els cims pendents</strong>
+                        <p>Accedeix a la teva àrea privada de la FEEC, ordena els cims per data (els més recents primer) i copia els cims pendents de validar.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div>
+                        <strong>Enganxa i completa les dades</strong>
+                        <p>Obre l’aplicació Validacims, enganxa la llista amb el botó <em>Pegar</em> i omple les dades personals (nom, DNI, llicència i club).</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div>
+                        <strong>Genera els formularis PDF</strong>
+                        <p>Prem <em>Generar Fulls PDF</em>. Els documents es guardaran a <code>Documents/Validacims</code> del teu ordinador.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div>
+                        <strong>Envia els PDFs a la teva entitat</strong>
+                        <p>Envia els formularis generats a la teva entitat excursionista perquè realitzin la validació oficial.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Característiques</h2>
+            <div class="features">
+                <div class="feature">
+                    <h3>Estalvia temps</h3>
+                    <p>Automatitza el procés de creació dels formularis oficials i concentra’t en gaudir de la muntanya.</p>
+                </div>
+                <div class="feature">
+                    <h3>Amb llicència única</h3>
+                    <p>Fes un pagament únic per obtenir una clau de llicència vàlida per a dues activacions del programa.</p>
+                </div>
+                <div class="feature">
+                    <h3>Windows i Mac</h3>
+                    <p>L’aplicació està disponible per a Windows i macOS. Descàrrega les versions i comença a utilitzar-la de seguida.</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Contacte</h2>
+            <p>Si tens dubtes o necessites assistència, escriu-nos a <a href="mailto:1976dcb@gmail.com">1976dcb@gmail.com</a>.</p>
+        </section>
+    </main>
+
+    <footer>
+        Creat amb 💙 per Dioni Camacho Bartolí – Setembre 2025<br>
+        Aquest lloc no està afiliat a la FEEC. Utilitza’l sota la teva responsabilitat.
+    </footer>
+</body>
+</html>
