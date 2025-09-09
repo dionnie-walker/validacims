@@ -4,78 +4,73 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Validacims – Genera els teus formularis oficials de la FEEC</title>
-  <meta name="description" content="Programa per generar formularis PDF de validació de cims del repte 100 Cims (FEEC). Descàrrega per a Windows i macOS. Compra la teva llicència." />
+  <meta name="description" content="Programa per generar formularis PDF de validació de cims del repte 100 Cims (FEEC). Descàrrega per a Windows i macOS. Donacions opcionals." />
   <meta name="theme-color" content="#2C6B5A" />
+
+  <!-- Favicons / App Icons -->
+  <link rel="icon" href="assets/validacims_icon.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/icon_16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/icon_32x32.png">
+  <link rel="icon" type="image/png" sizes="64x64" href="assets/icon_64x64.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/icon_256x256.png">
+
   <style>
     :root{
-      /* Paleta inspirada en el banner (verds i beix) */
-      --bg: #F1ECE2;            /* sorra suau */
-      --surface: #FAF7F1;       /* targeta clara */
-      --ink: #1E3A34;           /* verd molt fosc (text) */
-      --primary: #2C6B5A;       /* verd boscos */
-      --primary-600:#235547;    /* verd més fosc (hover) */
-      --accent:#3F806E;         /* verd-teal */
-      --muted:#6D8F82;          /* verd grisós per a textos secundaris */
-      --ring: rgba(44,107,90,.25);
+      /* Paleta a juego con el banner */
+      --bg: #F1ECE2;
+      --surface: #FAF7F1;
+      --ink: #1E3A34;
+      --primary: #2C6B5A;
+      --primary-600:#235547;
+      --accent:#3F806E;
+      --muted:#6D8F82;
       --radius: 14px;
     }
-    *{box-sizing:border-box} html,body{margin:0}
-    body{
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
-      color:var(--ink); background:var(--bg);
-      line-height:1.55;
-    }
+    *{box-sizing:border-box}
+    html,body{margin:0}
+    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif; background:var(--bg); color:var(--ink); line-height:1.55}
+
     a{color:var(--primary); text-decoration:none}
+    .wrap{max-width:1100px; margin:0 auto; padding:18px}
+    .row{display:flex; align-items:center; gap:12px}
+    .spacer{flex:1}
+
     header{
       position:sticky; top:0; z-index:10;
       backdrop-filter: saturate(140%) blur(6px);
       background: color-mix(in oklab, var(--bg) 85%, white 15%);
       border-bottom:1px solid #e6e0d6;
     }
-    .wrap{max-width:1100px; margin:0 auto; padding:18px 18px}
-    .row{display:flex; align-items:center; gap:14px}
-    .spacer{flex:1}
-    .brand{display:flex; align-items:center; gap:12px; font-weight:800; letter-spacing:.4px}
-    .brand .logo{
-      width:36px; height:36px; border-radius:10px;
-      background: linear-gradient(180deg, #2f6f5d, #234b3d);
-      display:grid; place-items:center; color:#fff; font-weight:900;
-      box-shadow: 0 4px 14px rgba(35,75,61,.15);
-    }
+    .brand{display:flex; align-items:center; gap:10px; font-weight:800; letter-spacing:.3px}
+    .brand img{height:36px; width:auto}
+
     .btn{
       display:inline-flex; align-items:center; gap:8px;
       padding:12px 18px; border-radius:12px; font-weight:700;
       border:1px solid color-mix(in oklab, var(--primary) 20%, #fff 80%);
       background: var(--primary); color:#fff;
       box-shadow: 0 8px 20px rgba(44,107,90,.25);
-      transition: transform .08s ease, background .15s ease, box-shadow .15s ease;
+      transition: transform .08s ease, background .15s ease;
     }
     .btn:hover{ background: var(--primary-600); transform: translateY(-1px) }
-    .btn:active{ transform: translateY(0) scale(.99) }
-    .btn-outline{
-      background:transparent; color:var(--primary); border-color:var(--primary);
-      box-shadow:none;
-    }
-    .btn-outline:hover{ background: color-mix(in oklab, var(--primary) 9%, white 91%); }
+    .btn-outline{ background:transparent; color:var(--primary); border-color:var(--primary); box-shadow:none }
+    .btn-outline:hover{ background: color-mix(in oklab, var(--primary) 9%, white 91%) }
 
-    /* Botó Donar amb Stripe (manté el color corporatiu de Stripe com em vas passar) */
+    /* Donar (Stripe) */
     .donate-btn{
-      display:inline-block;
-      padding: 14px 24px;
-      background: #635BFF;
-      color: #fff;
-      font-weight: 700;
-      font-size: 1rem;
-      border-radius: 12px;
-      text-decoration: none;
-      transition: background .2s, transform .1s, box-shadow .2s;
-      box-shadow: 0 8px 18px rgba(99,91,255,.35);
-      border:1px solid color-mix(in oklab, #635BFF 60%, #fff 40%);
+      display:inline-block; padding: 12px 18px; border-radius:12px; font-weight:700;
+      background:#635BFF; color:#fff; border:1px solid color-mix(in oklab, #635BFF 60%, #fff 40%);
+      box-shadow:0 8px 18px rgba(99,91,255,.35); transition: background .2s, transform .1s
     }
     .donate-btn:hover{ background:#5146e5; transform:translateY(-1px) }
-    .donate-btn:active{ transform:scale(.98) }
 
-    /* Hero */
+    /* Donar (PayPal) */
+    .donate-paypal{
+      background:#FFC439; color:#111; border:1px solid #e6b800;
+      box-shadow:0 8px 18px rgba(255,196,57,.35)
+    }
+    .donate-paypal:hover{ background:#FFB300 }
+
     .hero{
       background:
         radial-gradient(1200px 520px at 20% -10%, #dfe9e0 0%, transparent 60%),
@@ -83,7 +78,7 @@
         linear-gradient(180deg, #f6f2e9 0%, #efe7da 100%);
       border-bottom:1px solid #e6e0d6;
     }
-    .hero .wrap{padding:72px 18px}
+    .hero .wrap{padding:64px 18px}
     .hero-grid{display:grid; grid-template-columns:1.1fr .9fr; gap:28px; align-items:center}
     @media (max-width:900px){ .hero-grid{grid-template-columns:1fr} }
 
@@ -99,11 +94,8 @@
       padding:18px;
       box-shadow: 0 10px 26px rgba(33,62,55,.08);
     }
-    .banner{
-      border-radius: var(--radius);
-      overflow:hidden; border:1px solid #e2dbcf;
-    }
-    .banner img{ display:block; width:100%; height:auto }
+    .banner{border-radius: var(--radius); overflow:hidden; border:1px solid #e2dbcf}
+    .banner img{display:block; width:100%; height:auto}
 
     section{padding:52px 18px}
     h2{font-size: clamp(22px, 3vw, 32px); margin:0 0 12px}
@@ -120,11 +112,11 @@
   <header>
     <div class="wrap row">
       <div class="brand">
-        <div class="logo">✓</div>
+        <img src="assets/icon_64x64.png" alt="Validacims" />
         <div>VALIDACIMS</div>
       </div>
       <div class="spacer"></div>
-      <!-- Donar també a la capçalera -->
+      <!-- Donar rápido en cabecera -->
       <a href="https://donate.stripe.com/test_00weV54c28LOdya57P67S01" target="_blank" rel="noopener" class="donate-btn">🤝 Donar</a>
     </div>
   </header>
@@ -136,17 +128,23 @@
         <div>
           <div class="kicker">FEEC · 100 Cims</div>
           <h1>Validacims – Genera els teus formularis oficials</h1>
-          <p class="lead">Programa per transformar la teva llista de cims pendents en **PDFs llestos per validar** a la FEEC. Compatible amb **Windows i macOS**. Cada llicència permet fins a **2 activacions**.</p>
+          <p class="lead">Transforma la llista de cims pendents en **PDFs llestos per validar** a la FEEC. Compatible amb **Windows i macOS**. Cada llicència permet fins a **2 activacions**.</p>
           <div class="cta">
             <a class="btn" href="https://payhip.com/b/UauE6" target="_blank" rel="noopener">⬇️ Descarrega per a Windows</a>
             <a class="btn btn-outline" href="https://payhip.com/b/IuoPc" target="_blank" rel="noopener">⬇️ Descarrega per a macOS</a>
-            <a class="btn" href="https://payhip.com/b/NOG59" target="_blank" rel="noopener">🔑 Comprar llicència</a>
-            <a class="donate-btn" href="https://donate.stripe.com/test_00weV54c28LOdya57P67S01" target="_blank" rel="noopener">🤝 Donar amb targeta / Apple Pay / Google Pay</a>
+            <!-- Eliminat: Comprar llicència -->
+            <a class="donate-btn" href="https://donate.stripe.com/test_00weV54c28LOdya57P67S01" target="_blank" rel="noopener">💳 Donar (Stripe / Apple Pay / Google Pay)</a>
+            <a class="btn donate-paypal" href="#" target="_blank" rel="noopener" title="Afegeix el teu enllaç de PayPal">🅿️ Donar amb PayPal</a>
           </div>
         </div>
+
+        <!-- Banner responsive: usa el gran; si existe el petit, es carrega a mòbil -->
         <div class="banner card">
-          <!-- Guarda el banner com /assets/banner-validacims.png al teu repo -->
-          <img src="assets/banner-validacims.png" alt="Validacims: logotip amb muntanyes en tons verds" />
+          <picture>
+            <!-- Opcional: si NO tens aquest arxiu, es farà servir el gran de sota -->
+            <source media="(max-width: 700px)" srcset="assets/Validacims_HEADER_SMALL_800x320.png">
+            <img src="assets/Validacims_HEADER_BIG_center_1600x320.png" alt="Banner Validacims amb muntanyes en verd" />
+          </picture>
         </div>
       </div>
     </div>
@@ -157,28 +155,15 @@
       <div class="grid-3">
         <div class="card">
           <strong>1) Copia els cims</strong>
-          <p class="muted">Entra a la teva àrea privada de la FEEC, ordena per data (més nous primer) i copia els **cims pendents de validar**.</p>
+          <p class="muted">A la teva àrea privada de la FEEC, ordena per data (els més nous primer) i copia els **cims pendents de validar**.</p>
         </div>
         <div class="card">
           <strong>2) Enganxa i personalitza</strong>
-          <p class="muted">Obre Validacims, enganxa la llista, omple les teves dades (i opcionalment les del/de la president/a).</p>
+          <p class="muted">Obre Validacims, enganxa la llista i completa les teves dades (opcionalment les del/de la president/a).</p>
         </div>
         <div class="card">
           <strong>3) Genera els PDF</strong>
-          <p class="muted">Prem “Generar Fulls PDF”. Els arxius es desaran a **Documents/Validacims**. Envia’ls a la teva entitat.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Vídeo (opcional) -->
-    <section class="wrap">
-      <h2>Veure el procés en 1 minut</h2>
-      <p class="muted">Si tens un vídeo a YouTube, enganxa’l aquí:</p>
-      <div class="card" style="overflow:hidden">
-        <div style="position:relative;padding-top:56.25%">
-          <!-- Substitueix l’ID pel teu vídeo -->
-          <iframe src="https://www.youtube.com/embed/VIDEO_ID" title="Demostració Validacims"
-                  style="position:absolute;inset:0;width:100%;height:100%;border:0" allowfullscreen></iframe>
+          <p class="muted">Prem “Generar Fulls PDF”. Es guardaran a **Documents/Validacims**. Envia’ls a la teva entitat.</p>
         </div>
       </div>
     </section>
