@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="540" viewBox="0 0 920 540">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#0a5fbe"></stop>
+      <stop offset="100%" stop-color="#0c7bd6"></stop>
+    </linearGradient>
+    <filter id="shadow"><feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#000" flood-opacity="0.25"></feDropShadow></filter>
+  </defs>
+  <rect x="0" y="0" width="920" height="540" fill="url(#bg)"></rect>
+  <text x="40" y="70" fill="#fff" font-size="34" font-family="Segoe UI, Arial, sans-serif" font-weight="700">Windows protegió su PC</text>
+  <text x="40" y="112" fill="#e6f3ff" font-size="20" font-family="Segoe UI, Arial, sans-serif">SmartScreen de Microsoft Defender impidió el inicio de una aplicación desconocida.</text>
+  <text x="40" y="140" fill="#e6f3ff" font-size="20" font-family="Segoe UI, Arial, sans-serif">Si ejecutas esta aplicación, podrías poner en riesgo el PC.</text>
+
+  <g filter="url(#shadow)">
+    <rect x="38" y="200" width="840" height="120" rx="10" fill="#0b5bb8" stroke="#084c98" stroke-width="2"></rect>
+    <text x="60" y="240" fill="#ffffff" font-size="20" font-family="Segoe UI, Arial, sans-serif"><tspan font-weight="700">Aplicación:</tspan> Validacims.exe</text>
+    <text x="60" y="275" fill="#ffffff" font-size="20" font-family="Segoe UI, Arial, sans-serif"><tspan font-weight="700">Editor:</tspan> Editor desconocido</text>
+  </g>
+
+  <!-- Botones -->
+  <g filter="url(#shadow)">
+    <rect x="680" y="360" width="200" height="46" rx="6" fill="#d9d9d9"></rect>
+    <text x="730" y="390" fill="#222" font-size="20" font-family="Segoe UI, Arial, sans-serif">No ejecutar</text>
+  </g>
+
+  <g>
+    <rect x="40" y="360" width="200" height="46" rx="6" fill="#f7faff" stroke="#9cc7ff" stroke-width="3"></rect>
+    <text x="60" y="390" fill="#0a5fbe" font-size="20" font-family="Segoe UI, Arial, sans-serif" font-weight="700">Más información</text>
+  </g>
+
+  <!-- Flecha y etiqueta -->
+  <path d="M140 320 C140 330 140 340 140 355" stroke="#ffd34d" stroke-width="6" fill="none"></path>
+  <polygon points="140,355 130,340 150,340" fill="#ffd34d"></polygon>
+  <rect x="260" y="315" width="380" height="40" rx="6" fill="#ffd34d"></rect>
+  <text x="280" y="343" fill="#2a2a2a" font-size="20" font-family="Segoe UI, Arial, sans-serif" font-weight="700">1) Haz clic en “Más información”</text>
+</svg>

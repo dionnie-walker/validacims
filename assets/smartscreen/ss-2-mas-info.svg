@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="540" viewBox="0 0 920 540">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#0a5fbe"></stop>
+      <stop offset="100%" stop-color="#0c7bd6"></stop>
+    </linearGradient>
+    <filter id="shadow"><feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#000" flood-opacity="0.25"></feDropShadow></filter>
+  </defs>
+  <rect x="0" y="0" width="920" height="540" fill="url(#bg)"></rect>
+  <text x="40" y="70" fill="#fff" font-size="34" font-family="Segoe UI, Arial, sans-serif" font-weight="700">Windows protegió su PC</text>
+  <text x="40" y="112" fill="#e6f3ff" font-size="20" font-family="Segoe UI, Arial, sans-serif">Has abierto la información adicional de la aplicación.</text>
+
+  <g filter="url(#shadow)">
+    <rect x="38" y="160" width="840" height="200" rx="10" fill="#0b5bb8" stroke="#084c98" stroke-width="2"></rect>
+    <text x="60" y="200" fill="#ffffff" font-size="20" font-family="Segoe UI, Arial, sans-serif"><tspan font-weight="700">Aplicación:</tspan> Validacims.exe</text>
+    <text x="60" y="235" fill="#ffffff" font-size="20" font-family="Segoe UI, Arial, sans-serif"><tspan font-weight="700">Editor:</tspan> Editor desconocido</text>
+    <text x="60" y="270" fill="#ffffff" font-size="18" font-family="Segoe UI, Arial, sans-serif">Esta aplicación no tiene reputación aún. Si confías en el autor, puedes continuar.</text>
+  </g>
+
+  <!-- Botón Ejecutar de todas formas (remarcado) -->
+  <g filter="url(#shadow)">
+    <rect x="580" y="380" width="300" height="48" rx="6" fill="#ffd34d" stroke="#caa11a" stroke-width="3"></rect>
+    <text x="600" y="411" fill="#2a2a2a" font-size="20" font-family="Segoe UI, Arial, sans-serif" font-weight="700">Ejecutar de todas formas</text>
+  </g>
+
+  <path d="M680 360 C680 350 680 335 660 320" stroke="#ffd34d" stroke-width="6" fill="none"></path>
+  <polygon points="660,320 650,335 670,335" fill="#ffd34d"></polygon>
+
+  <rect x="60" y="430" width="440" height="40" rx="6" fill="#ffd34d"></rect>
+  <text x="80" y="456" fill="#2a2a2a" font-size="20" font-family="Segoe UI, Arial, sans-serif" font-weight="700">2) Pulsa “Ejecutar de todas formas”</text>
+</svg>

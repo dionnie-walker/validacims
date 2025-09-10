@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="540" viewBox="0 0 920 540">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#0a5fbe"></stop>
+      <stop offset="100%" stop-color="#0c7bd6"></stop>
+    </linearGradient>
+    <filter id="shadow"><feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#000" flood-opacity="0.25"></feDropShadow></filter>
+  </defs>
+  <rect x="0" y="0" width="920" height="540" fill="url(#bg)"></rect>
+  <g filter="url(#shadow)">
+    <circle cx="120" cy="120" r="56" fill="#28a745"></circle>
+    <polyline points="95,120 115,140 150,100" fill="none" stroke="#fff" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"></polyline>
+  </g>
+  <text x="200" y="130" fill="#ffffff" font-size="34" font-family="Segoe UI, Arial, sans-serif" font-weight="700">¡Listo! El programa se abrirá.</text>
+  <text x="200" y="170" fill="#e6f3ff" font-size="20" font-family="Segoe UI, Arial, sans-serif">Recuerda: Validacims es gratuito y puedes apoyar con una donación voluntaria.</text>
+
+  <g filter="url(#shadow)">
+    <rect x="40" y="230" width="840" height="210" rx="10" fill="#0b5bb8" stroke="#084c98" stroke-width="2"></rect>
+    <text x="60" y="270" fill="#ffffff" font-size="22" font-family="Segoe UI, Arial, sans-serif" font-weight="700">Consejo</text>
+    <text x="60" y="305" fill="#ffffff" font-size="18" font-family="Segoe UI, Arial, sans-serif">Para futuras versiones, el aviso disminuirá conforme el archivo gane reputación.</text>
+    <text x="60" y="335" fill="#ffffff" font-size="18" font-family="Segoe UI, Arial, sans-serif">Puedes verificar la descarga oficial en GitHub Releases.</text>
+  </g>
+</svg>
